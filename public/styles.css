@@ -1,0 +1,196 @@
+body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    background: linear-gradient(135deg, #f5f7fa 0%, #e4e8eb 100%);
+    min-height: 100vh;
+}
+
+h1 {
+    text-align: center;
+    color: #2c3e50;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+}
+
+h1::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: #00aeff;
+    margin: 10px auto;
+    border-radius: 2px;
+}
+
+#todo-form {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 30px;
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+}
+
+#todo-input {
+    flex: 1;
+    padding: 12px 20px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+#todo-input:focus {
+    border-color: #00aeff;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0,174,255,0.1);
+}
+
+button {
+    padding: 12px 24px;
+    background: #00aeff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+button:hover {
+    background: #0044ff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,68,255,0.2);
+}
+
+.todo-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 2rem auto;
+}
+
+.task-section {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+}
+
+.task-section h2 {
+    color: #2c3e50;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 3px solid #00aeff;
+}
+
+.todo-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    margin: 0.8rem 0;
+    background: #f8fafc;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    transition: all 0.3s ease;
+}
+
+.todo-item:hover {
+    transform: translateX(4px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.complete-btn {
+    padding: 8px 16px;
+    border-radius: 6px;
+    background: #00aeff;
+    font-weight: 600;
+}
+
+.complete-btn.completed {
+    background: #10b981;
+}
+
+.todo-text {
+    flex: 1;
+    font-size: 1rem;
+    color: #4a5568;
+}
+
+.todo-text.completed {
+    text-decoration: line-through;
+    color: #a0aec0;
+}
+
+.delete-btn {
+    padding: 8px 16px;
+    background: #ef4444;
+    font-weight: 600;
+}
+
+.delete-btn:hover {
+    background: #dc2626;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+        transform: translateY(-15px) scale(0.98);
+    }
+}
+
+/* Modern scrollbar styling */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #00aeff;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #0044ff;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    body {
+        padding: 20px 15px;
+    }
+    
+    .todo-container {
+        grid-template-columns: 1fr;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+}
