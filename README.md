@@ -26,7 +26,14 @@ A sleek and interactive task management application built with modern web techno
 
 ## File Structure
 
-To-Do-List-App/ ├── public/ │ ├── index.html │ ├── styles.css │ └── app.js ├── server.js ├── package.json ├── package-lock.json └── README.md
+To-Do-List-App/ ├── public/ 
+-               │ ├── index.html
+-               │ ├── styles.css
+-               │ └── app.js
+-               ├── server.js
+-               ├── package.json
+-               ├── package-lock.json
+-               └── README.md
 
 ## Getting Started
 
