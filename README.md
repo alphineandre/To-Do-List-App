@@ -37,12 +37,12 @@ git clone https://github.com/alphineandre/To-Do-List-App.git
 
 ## Usage
 
-Add a task: Type your task in the input field and click "Add Task"
-Complete a task: Click the "Complete" button
-Delete a task: Click the "Delete" button
-View tasks: Current tasks and completed tasks are displayed in separate sections
-Contributing
-Feel free to submit issues and enhancement requests!
+- Add a task: Type your task in the input field and click "Add Task"
+- Complete a task: Click the "Complete" button
+- Delete a task: Click the "Delete" button
+- View tasks: Current tasks and completed tasks are displayed in separate sections
+- Contributing
+- Feel free to submit issues and enhancement requests!
 
 ## License
 MIT License
