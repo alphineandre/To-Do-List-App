@@ -27,7 +27,7 @@ h1 {
 
 button {
     padding: 8px 16px;
-    background-color: #4CAF50;
+    background-color: #00aeff;
     color: white;
     border: none;
     border-radius: 4px;
@@ -36,7 +36,7 @@ button {
 }
 
 button:hover {
-    background-color: #45a049;
+    background-color: #0044ff;
 }
 
 #todo-list {
@@ -103,7 +103,7 @@ button:hover {
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    background: #4CAF50;
+    background: #0084ff;
     color: white;
     transition: all 0.3s ease;
 }
