@@ -23,15 +23,22 @@ document.addEventListener('DOMContentLoaded', () => {
     const createTodoElement = (todo) => {
         const li = document.createElement('li');
         li.className = 'todo-item';
+        const timestamp = new Date().toLocaleString('en-US', {
+            dateStyle: 'medium',
+            timeStyle: 'short'
+        });
+    
         li.innerHTML = `
             <button class="complete-btn ${todo.completed ? 'completed' : ''}">${todo.completed ? '✓' : 'Complete'}</button>
-            <span class="todo-text ${todo.completed ? 'completed' : ''}">${todo.text}</span>
+            <div class="todo-content">
+                <span class="todo-text ${todo.completed ? 'completed' : ''}">${todo.text}</span>
+                <span class="todo-timestamp">${timestamp}</span>
+            </div>
             <button class="delete-btn">Delete</button>
         `;
 
         // Add slide-in animation
         li.style.animation = 'slideIn 0.3s ease-out';
-
         // Complete button handler
         const completeBtn = li.querySelector('.complete-btn');
         completeBtn.addEventListener('click', async () => {

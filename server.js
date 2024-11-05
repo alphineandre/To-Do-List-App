@@ -23,7 +23,8 @@ app.post('/api/todos', (req, res) => {
     const newTodo = {
         id: nextId++,
         text: req.body.text,
-        completed: false
+        completed: false,
+        timestamp: new Date().toLocaleString()
     };
     todos.push(newTodo);
     res.status(201).json(newTodo);
