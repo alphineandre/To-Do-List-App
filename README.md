@@ -32,7 +32,8 @@ To-Do-List-App/ ├── public/ │ ├── index.html │ ├── styles.
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/alphineandre/To-Do-List-App.git
+git clone https://github.com/alphineandre/To-Do-List-App.git  
+```
 
 ## Usage
 
