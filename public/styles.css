@@ -100,7 +100,7 @@ button:hover {
     gap: 1rem;
     padding: 1rem;
     margin: 0.8rem 0;
-    background: #f8fafc46;
+    background: #f8fafc;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.04);
     transition: all 0.3s ease;
@@ -122,30 +122,6 @@ button:hover {
     font-size: 0.8rem;
     color: #666;
     font-style: italic;
-}
-
-#due-date-input {
-    padding: 12px 20px;
-    border: 2px solid #e0e0e0;
-    border-radius: 8px;
-    font-size: 16px;
-    transition: all 0.3s ease;
-}
-
-.todo-item.warning {
-    background: #fff3dc;
-    border-left: 4px solid #ffd700;
-}
-
-.todo-item.danger {
-    background: #ffe4e4;
-    border-left: 4px solid #ff4444;
-}
-
-.due-date {
-    font-size: 0.9rem;
-    color: #666;
-    margin-top: 4px;
 }
 
 .complete-btn {
