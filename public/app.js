@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
         `;
 
         // Add slide-in animation
-        li.style.animation = 'slideIn 0.3s ease-out';
+        li.style.animation = 'slideIn 1.0s ease-out';
         // Complete button handler
         const completeBtn = li.querySelector('.complete-btn');
         completeBtn.addEventListener('click', async () => {
