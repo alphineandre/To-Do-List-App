@@ -1,0 +1,65 @@
+const { JSDOM } = require('jsdom');
+const fs = require('fs');
+const path = require('path');
+
+describe('Todo List HTML Structure', () => {
+  let dom;
+  let document;
+
+  beforeEach(() => {
+    const html = fs.readFileSync(path.resolve(__dirname, '../public/index.html'), 'utf8');
+    dom = new JSDOM(html);
+    document = dom.window.document;
+  });
+
+  test('should have correct DOCTYPE and language', () => {
+    expect(document.doctype.name).toBe('html');
+    expect(document.documentElement.lang).toBe('en');
+  });
+
+  test('should have required meta tags', () => {
+    const metaTags = document.getElementsByTagName('meta');
+    expect(metaTags[0].getAttribute('charset')).toBe('UTF-8');
+    expect(metaTags[1].getAttribute('name')).toBe('viewport');
+    expect(metaTags[1].getAttribute('content')).toBe('width=device-width, initial-scale=1.0');
+  });
+
+  test('should have proper stylesheet link', () => {
+    const styleLink = document.querySelector('link[rel="stylesheet"]');
+    expect(styleLink).toBeTruthy();
+    expect(styleLink.getAttribute('href')).toBe('styles.css');
+  });
+
+  test('should have correct page title', () => {
+    expect(document.title).toBe('Todo List');
+  });
+
+  test('should have todo form with correct elements', () => {
+    const form = document.getElementById('todo-form');
+    const input = document.getElementById('todo-input');
+    const button = form.querySelector('button');
+
+    expect(form).toBeTruthy();
+    expect(input).toBeTruthy();
+    expect(input.getAttribute('type')).toBe('text');
+    expect(input.getAttribute('placeholder')).toBe('Add a new task...');
+    expect(button).toBeTruthy();
+    expect(button.textContent).toBe('Add Task');
+  });
+
+  test('should have task sections with correct structure', () => {
+    const taskSections = document.getElementsByClassName('task-section');
+    const currentTasks = document.getElementById('current-tasks');
+    const completedTasks = document.getElementById('completed-tasks');
+
+    expect(taskSections.length).toBe(2);
+    expect(currentTasks).toBeTruthy();
+    expect(completedTasks).toBeTruthy();
+  });
+
+  test('should have script tag with correct source', () => {
+    const script = document.querySelector('script');
+    expect(script).toBeTruthy();
+    expect(script.getAttribute('src')).toBe('app.js');
+  });
+});
