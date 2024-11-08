@@ -16,7 +16,7 @@ h1 {
     margin-bottom: 3rem;
     background: linear-gradient(45deg, #5b25ff, #ff416c);
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    background-clip: text;    -webkit-text-fill-color: transparent;
     text-shadow: 2px 2px 20px rgba(91, 37, 255, 0.2);
 }
 
@@ -88,7 +88,7 @@ button:hover {
     margin-bottom: 25px;
     background: linear-gradient(45deg, #5b25ff, #ff416c);
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    background-clip: text;    -webkit-text-fill-color: transparent;
 }
 
 .todo-item {
