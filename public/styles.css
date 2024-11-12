@@ -109,22 +109,22 @@ button:hover {
     border-color: rgba(91, 37, 255, 0.5);
     box-shadow: 0 10px 30px rgba(91, 37, 255, 0.15);
 }
+  .todo-content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+  }
 
-.todo-content {
-    flex: 1;
-}
+  .todo-text {
+      color: #fff;
+      font-size: 1.1rem;
+  }
 
-.todo-text {
-    color: #fff;
-    font-size: 1.1rem;
-    margin-bottom: 5px;
-}
-
-.todo-timestamp {
-    color: rgba(255, 255, 255, 0.5);
-    font-size: 0.8rem;
-}
-
+  .todo-timestamp {
+      color: rgba(255, 255, 255, 0.5);
+      font-size: 0.8rem;
+  }
 .complete-btn {
     background: linear-gradient(45deg, #5b25ff, #7b49ff);
     padding: 10px 20px;
