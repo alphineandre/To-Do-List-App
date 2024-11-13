@@ -2,6 +2,11 @@
 
 A sleek and interactive task management application built with modern web technologies. This application allows users to efficiently manage their tasks with real-time updates and smooth animations.
 
+## Live link
+```bash
+https://snow-playful-gargoyleosaurus.glitch.me
+```
+
 ## Features
 
 - ✨ Add new tasks with timestamps
