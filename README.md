@@ -51,5 +51,11 @@ git clone https://github.com/alphineandre/To-Do-List-App.git
 - Contributing
 - Feel free to submit issues and enhancement requests!
 
+## Screenshots
+
+![New task added](https://github.com/user-attachments/assets/46a1dd50-63e8-4b16-9608-728de42a0e74)
+![Task Completed](https://github.com/user-attachments/assets/6bdc0509-ea86-4ff7-a6b8-4bbb7fc1eb36)
+![To Do List](https://github.com/user-attachments/assets/6c1619ff-38c6-4627-a7ad-a786fbf0d4d4)
+
 ## License
 MIT License
