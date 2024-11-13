@@ -1,4 +1,4 @@
-# Modern To-Do List Application
+# To-Do List Application
 
 A sleek and interactive task management application built with modern web technologies. This application allows users to efficiently manage their tasks with real-time updates and smooth animations.
 
@@ -24,9 +24,13 @@ A sleek and interactive task management application built with modern web techno
   - Express.js
   - CORS middleware
 
-## File Structure
+## File Structure    
 
-To-Do-List-App/ ├── public/ 
+To-Do-List-App/ ├── __tests__
+-               │ ├── app.test.js
+-               │ └── index.test.html
+-               ├── node_modules
+-               ├── public/ 
 -               │ ├── index.html
 -               │ ├── styles.css
 -               │ └── app.js
@@ -53,6 +57,7 @@ git clone https://github.com/alphineandre/To-Do-List-App.git
 
 ## Screenshots
 
+![Init](https://github.com/user-attachments/assets/855a6d03-f26a-440c-ad62-61d974045af8)
 ![New task added](https://github.com/user-attachments/assets/46a1dd50-63e8-4b16-9608-728de42a0e74)
 ![Task Completed](https://github.com/user-attachments/assets/6bdc0509-ea86-4ff7-a6b8-4bbb7fc1eb36)
 ![To Do List](https://github.com/user-attachments/assets/6c1619ff-38c6-4627-a7ad-a786fbf0d4d4)
