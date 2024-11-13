@@ -1,0 +1,184 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #1a1a2e;
+    color: #fff;
+    min-height: 100vh;
+    margin: 0;
+    padding: 40px 20px;
+    background-image: 
+        radial-gradient(circle at 10% 20%, rgba(91, 37, 255, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 90% 80%, rgba(255, 65, 108, 0.1) 0%, transparent 50%);
+}
+
+h1 {
+    font-size: 3.5rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    background: linear-gradient(45deg, #5b25ff, #ff416c);
+    -webkit-background-clip: text;
+    background-clip: text;    -webkit-text-fill-color: transparent;
+    text-shadow: 2px 2px 20px rgba(91, 37, 255, 0.2);
+}
+
+#todo-form {
+    max-width: 800px;
+    margin: 0 auto 40px;
+    display: flex;
+    gap: 20px;
+    background: rgba(255, 255, 255, 0.03);
+    padding: 25px;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+#todo-input {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.05);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    padding: 15px 25px;
+    border-radius: 15px;
+    color: #fff;
+    font-size: 1.1rem;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#todo-input:focus {
+    border-color: #5b25ff;
+    box-shadow: 0 0 25px rgba(91, 37, 255, 0.2);
+    outline: none;
+}
+
+button {
+    background: linear-gradient(45deg, #5b25ff, #ff416c);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 15px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 5px 15px rgba(91, 37, 255, 0.2);
+}
+
+button:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 8px 25px rgba(91, 37, 255, 0.3);
+}
+
+.todo-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.task-section {
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 20px;
+    padding: 30px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.task-section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+    background: linear-gradient(45deg, #5b25ff, #ff416c);
+    -webkit-background-clip: text;
+    background-clip: text;    -webkit-text-fill-color: transparent;
+}
+
+.todo-item {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    padding: 20px;
+    margin: 15px 0;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.todo-item:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(91, 37, 255, 0.5);
+    box-shadow: 0 10px 30px rgba(91, 37, 255, 0.15);
+}
+  .todo-content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+  }
+
+  .todo-text {
+      color: #fff;
+      font-size: 1.1rem;
+  }
+
+  .todo-timestamp {
+      color: rgba(255, 255, 255, 0.5);
+      font-size: 0.8rem;
+  }
+.complete-btn {
+    background: linear-gradient(45deg, #5b25ff, #7b49ff);
+    padding: 10px 20px;
+}
+
+.complete-btn.completed {
+    background: linear-gradient(45deg, #10b981, #059669);
+}
+
+.delete-btn {
+    background: linear-gradient(45deg, #ff416c, #ff4b2b);
+    padding: 10px 20px;
+}
+
+.todo-text.completed {
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(45deg, #5b25ff, #ff416c);
+    border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+    
+    .todo-container {
+        grid-template-columns: 1fr;
+    }
+    
+    #todo-form {
+        flex-direction: column;
+    }
+}
